@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.31pt}
+\beamer@sectionintoc {2}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {3}{Trend Analysis}{3}{0}{2}
+\beamer@sectionintoc {4}{Bonferroni}{3}{0}{3}
+\beamer@sectionintoc {5}{PowerAnalysis}{3}{0}{4}
+\beamer@subsectionintoc {5}{1}{Post Hoc}{3}{0}{4}
+\beamer@subsectionintoc {5}{2}{A Priori}{3}{0}{4}
+\beamer@subsectionintoc {5}{3}{manipulation}{3}{0}{4}
+\beamer@sectionintoc {6}{Conclusions}{4}{0}{5}

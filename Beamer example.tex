@@ -1,0 +1,96 @@
+%one frame per minute
+%try to guess the questions and prepare for them with slides \appendix
+%each frame should have  between 20 and 40 words and 80 max
+%usually graphics are on the left of text
+\documentclass{beamer}
+\mode<presentation>
+
+%packages
+\usepackage{pgf}
+\usepackage{xcolor}
+
+\usetheme{Berlin}
+%\usecolortheme{seahorse}
+
+
+\title{Statistical Analyses on Legacy data of the GRSM Stream Survey}
+\author{Tim Pobst}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\section*{Outline}
+\begin{frame}
+	\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\section{Trend Analysis}%graphic: pH increasing over time
+
+\section{Bonferroni}%the group comparisons table
+
+\begin{frame}
+
+\section{PowerAnalysis}
+
+\subsection{Post Hoc}%some kind of summary table
+\title{Post Hoc Power Analysis}
+\alert{Power analysis conducted on hypothesis tests already preformed.}
+
+\subsection{A Priori}%show power graphs, maybe the summary table and then the power graphs in an appendix
+Power analysis conducted before a hypothesis test is preformed and then used in planning.
+
+\subsection{manipulation}%final table
+
+\end{frame}
+
+\begin{frame}	
+\section{Conclusions}
+\begin{itemize}
+	\item Water quality is getting better
+	\item Sulfate sequestration is supported
+	\item The power of the time trends are excelent
+	\item Sites require re-distribution
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\end{frame}
+
+\begin{frame}{Make Titles Informative.}
+
+  You can create overlays\dots
+  \begin{itemize}
+  \item using the \texttt{pause} command:
+    \begin{itemize}
+    \item
+      First item.
+      \pause
+    \item    
+      Second item.
+    \end{itemize}
+  \item
+    using overlay specifications:
+    \begin{itemize}
+    \item<3->
+      First item.
+    \item<4->
+      Second item.
+    \end{itemize}
+  \item
+    using the general \texttt{uncover} command:
+    \begin{itemize}
+      \uncover<5->{\item
+        First item.}
+      \uncover<6->{\item
+        Second item.}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\end{document}

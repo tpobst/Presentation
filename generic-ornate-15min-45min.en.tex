@@ -1,0 +1,231 @@
+% $Header: /Users/joseph/Documents/LaTeX/beamer/solutions/generic-talks/generic-ornate-15min-45min.en.tex,v 90e850259b8b 2007/01/28 20:48:30 tantau $
+
+\documentclass[svgnames,smaller]{beamer}
+
+% This file is a solution template for:
+
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\mode<presentation>
+{
+  \usetheme{Darmstadt}
+ 	\usecolortheme[named=ForestGreen]{structure}
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\title[Statistical Analysis] % (optional, use only with long paper titles)
+{Statistical Analyses on Legacy data of the GRSM Stream Survey}
+
+\subtitle
+{Time Trend Analysis, ANOVA, Power Analysis} % (optional)
+
+\author[Pobst, Tim] % (optional, use only with lots of authors)
+{Tim Pobst}
+
+\institute[University of Tennesssee Knoxville] % (optional, but mostly needed)
+{Department of Civil and Environmental Engineering\\
+University of Tennessee}
+
+\date[Thesis Defense] % (optional)
+{\today}
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+\pgfdeclareimage[height=0.5cm]{university-logo}{Figures/utlogo-large.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{smokies}{Figures/smoky_mountains_sunrise_.jpg}
+\usebackgroundtemplate{\tikz\node[opacity=0.3]{\pgfuseimage{smokies}};}
+
+%\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height =\paperheight]{Figures/smoky_mountains_sunrise_.jpg}}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+	\subsection{Description of study area}
+		\input{Frames/DescriptionofStudyArea}
+
+	\subsection{Acid Deposition and the GRSM}
+		\input{Frames/AcidDepositionandtheGRSM}
+
+	\subsection{Stream Survey}
+		\input{Frames/Database}
+
+		\input{Frames/ElevationBands}
+
+	\subsection{Time sets}
+		\input{Frames/TimeSets}
+			
+	\subsection{Data Smoothing}
+		\input{Frames/DataSmoothing}
+
+	\subsection{Objectives}
+		\input{Frames/Objectives}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Time Trend Analysis}
+
+	\subsection{Introduction}
+		\input{Frames/Trendhistory}
+	
+	\subsection{Regression}
+		\input{Frames/equations}
+
+		\input{Frames/Stepwiseeq}%put this in an appendix?
+
+	\subsection{Results}
+		\input{Frames/Trendresults}
+		
+		\input{Frames/Elevationtrends}	
+
+		\input{Frames/Differences}
+
+		\input{Frames/Comparison}
+
+	\subsection{Discussion and Conclusions}
+\begin{frame}
+	%\begin{block}{Copnclusions on elevation and time}
+		%\begin{itemize}
+			%\item elevation was not chosen through the step-wise process
+			%\begin{itemize}	
+				%\item elevation not as important as other variables
+				%\item elevation classes already classify elevation
+				%\item elevation classes may be to small for elevation to be important
+			%\end{itemize}
+			%\item Time may not explain enough variance to use regression for time trends
+			%\item agree with the biotics effects report that pH is increasing over time
+			%\item sulfate has more decreasing trends for set 3 than any other time set
+		%\end{itemize}
+	%\end{block}
+	\begin{block}{Conclusions on Sulfate}
+		sulfate desorption is of greater concern than pH levels in the park
+		\begin{itemize}
+			\item Lack of trend found in the Biotics effects report were attributed to high elevation soil adsorption of depsotional sulfate
+				%sulfate pollution is held between deposition and the streams
+			\item Sulfate will remain absorbed to soil particles as long as soil water chemistry remains high in sulfate concentration and low in pH
+				%when pH rises and sulfate concentration lowers the extra "held" sulfate pollution will make its way into the streams
+			%\item sulfate elevation trends are decreasing overtime but mean concentrations are increasing through time
+			\item Over time most sulfate concentrations are positive but in set 3: classes 1, 4, and 6 have negative trends
+			\item The elevation trend is decreasing over time
+			\item The combination of these trends support desorption of sulfate into the streams bringing the elevation trend to equilibrium
+		\end{itemize}
+	\end{block}
+\end{frame}
+		
+		
+		
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ANOVA}
+
+\begin{frame}
+	\begin{itemize}\pause
+		\item ANOVA/Bonferroni\pause
+		\item Discussion
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Power Analysis}
+
+\begin{frame}
+	\begin{itemize}\pause
+		\item Power Analysis\pause
+		\item Post Hoc\pause
+		\item A priori\pause
+		\item Manipulation
+	\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Summary}
+
+\begin{frame}{Summary}
+
+  % Keep the summary *very short*.
+  \begin{itemize}
+  \item
+    \alert{Water Quality is getting better}\pause
+  \item
+    \alert{Sulfate sequestration is supported}\pause
+  \item
+    \alert{The power of the time trends are excelent}\pause
+  \item
+     \alert{Power analysis can help re-distribute sites}\pause
+  \end{itemize}
+  
+  % The following outlook is optional.
+  \vskip0pt plus.5fill
+  \begin{itemize}
+  \item
+    Outlook
+    \begin{itemize}
+    \item
+     Elevation Bands
+    \item
+      Effects of sulfate scrubbers
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+

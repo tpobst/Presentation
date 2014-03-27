@@ -1,0 +1,222 @@
+% $Header: /Users/joseph/Documents/LaTeX/beamer/solutions/generic-talks/generic-ornate-15min-45min.en.tex,v 90e850259b8b 2007/01/28 20:48:30 tantau $
+
+\documentclass[svgnames,smaller]{beamer}
+
+% This file is a solution template for:
+
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\mode<presentation>
+{
+  \usetheme{Darmstadt}
+ 	\usecolortheme[named=ForestGreen]{structure}
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[latin1]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{pgfplots}
+\usepackage{rotating}
+\usepgfplotslibrary{clickable}
+
+\title[Statistical Analysis] % (optional, use only with long paper titles)
+{Statistical Analyses on Legacy data of the GRSM Stream Survey}
+
+\subtitle
+{Time Trend Analysis, ANOVA, Power Analysis} % (optional)
+
+\author[Pobst, Tim] % (optional, use only with lots of authors)
+{Tim Pobst}
+
+\institute[University of Tennesssee Knoxville] % (optional, but mostly needed)
+{Department of Civil and Environmental Engineering\\
+University of Tennessee}
+
+\date[Thesis Defense] % (optional)
+{\today}
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+%\pgfdeclareimage[height=0.5cm]{university-logo}{Figures/utlogo-large.jpg}
+%\logo{\pgfuseimage{university-logo}}
+
+\pgfdeclareimage[height=\paperheight,width=\paperwidth]{smokies}{Figures/smoky_mountains_sunrise_.jpg}
+\usebackgroundtemplate{\tikz\node[opacity=0.3]{\pgfuseimage{smokies}};}
+
+%\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height =\paperheight]{Figures/smoky_mountains_sunrise_.jpg}}
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Contents}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+		
+	\subsection{Great Smoky Mountains}
+		\input{Frames/DescriptionofStudyArea}
+
+		\input{Frames/AcidDepositionandtheGRSM}
+
+	\subsection{Stream Survey}
+		\input{Frames/Database}
+
+		\input{Frames/ElevationBands}
+
+		\input{Frames/TimeSets}
+			
+		\input{Frames/DataSmoothing}
+
+	\subsection{Objectives}
+		\input{Frames/Objectives}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Time Trend Analysis}
+
+	\subsection{Regression}
+		\input{Frames/Trendhistory}
+	
+		\input{Frames/equations}
+
+	\subsection{Results}
+		\input{Frames/Trendresults}
+		
+		\input{Frames/Elevationtrends}	
+
+		\input{Frames/Comparison}
+
+		\input{Frames/Differences}
+
+	\subsection{Discussion and Conclusions}
+		\input{Frames/TAconc.}		
+			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{ANOVA}
+	
+	\subsection{Introduction}
+		\input{Frames/ANOVAintro}%Interestingly the through fall SO4 concentrations dramatically decline from about 115 eq L in 2007 to about 30 in 2010
+
+	\subsection{Methods}
+		\input{Frames/ANOVAmethods}
+
+	\subsection{Results}
+		\input{Frames/Bontables}
+		
+		\input{Frames/Linegraphs}
+		
+	\subsection{Discussion and Conclusions}
+		\input{Frames/Bonconclusions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Power Analysis}
+	
+	\subsection{Power Analysis}
+		\input{Frames/PAIntro}
+
+		\input{Frames/PowerAnalysis}
+		
+		\input{Frames/Effectsize}
+
+	\subsection{Results}
+		\input{Frames/PAPH}%it is very easy to get good results when the ES values are so high
+
+		\input{Frames/powergraphs}
+
+	\subsection{Manipulation}
+		\input{Frames/Conventions}	
+	
+		\input{Frames/aprioritable}
+
+		\input{Frames/Currentrates}
+		
+		\input{Frames/TArequirements}
+		
+		\input{Frames/TArequirementsperelevation}
+		
+		\input{Frames/PAconc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Summary}
+
+\begin{frame}{Summary}
+	%\begin{block}{Summary}
+  		\begin{itemize}[<+->]
+ 			\item Water Quality is getting better	
+			\item Sulfate sequestration is supported   
+ 			\item The power of the time trends are excellent
+			\item Power analysis can help re-distribute sites
+		  \end{itemize}
+	%\end{block}  
+  \vskip0pt plus.5fill
+	  %\begin{block}{Outlook}
+		\begin{itemize}[<+->]
+			\item Outlook	    
+ 			\begin{itemize}
+  				 \item  Elevation Bands
+    				 \item   Effects of sulfate scrubbers
+   			\end{itemize}
+		\end{itemize}
+ 	 %\end{block}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
+
+

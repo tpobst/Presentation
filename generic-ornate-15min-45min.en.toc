@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.31pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Description of study area}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Acid Deposition and the GRSM}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Stream Survey}{5}{0}{1}
+\beamer@subsectionintoc {1}{4}{Time sets}{7}{0}{1}
+\beamer@subsectionintoc {1}{5}{Data Smoothing}{10}{0}{1}
+\beamer@subsectionintoc {1}{6}{Objectives}{11}{0}{1}
+\beamer@sectionintoc {2}{Time Trend Analysis}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Introduction}{15}{0}{2}
+\beamer@subsectionintoc {2}{2}{Regression}{18}{0}{2}
+\beamer@subsectionintoc {2}{3}{Results}{20}{0}{2}
+\beamer@subsectionintoc {2}{4}{Discussion and Conclusions}{33}{0}{2}
+\beamer@sectionintoc {3}{ANOVA}{34}{0}{3}
+\beamer@sectionintoc {4}{Power Analysis}{37}{0}{4}

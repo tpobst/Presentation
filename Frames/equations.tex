@@ -1,0 +1,18 @@
+\begin{frame}<1-3>{Two equation methods}
+	\only<1,3>{\begin{block}{Step-wise: $Y=\beta_0 + \beta_1  T + \beta_2  X + \beta_n X + \epsilon$}
+		\begin{itemize}
+			\item Multi-step process of adding and removing variables
+			\item A variable with an F test statistic of .05 or higher can enter but would be removed if it exceeded .10. %goodness of fit test for the whole equation
+			\item If any of the time variables were chosen by the step-wise method, the others were forced in.
+		\end{itemize}
+	\end{block}}
+
+	\only<2>{\input{Tables/stepwiseeq}}
+
+	\only<1,3>{\uncover<3>{\begin{block}{Time Variables: $Y= \beta_0 + \beta_1 Julian Date + \beta_2 \sin(\theta) + \beta_3 \cos(\theta) + \epsilon$}
+		\begin{itemize}
+			\item Remove the confusion caused by extra non-time based variables
+			\item Inherently weaker because time doesn't explain all the variation of the dependent variables.
+		\end{itemize}
+	\end{block}}}
+\end{frame}
